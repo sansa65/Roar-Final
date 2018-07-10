@@ -1,0 +1,12 @@
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\bin\Debug\Roar-Final.exe.config
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\bin\Debug\Roar-Final.exe
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\bin\Debug\Roar-Final.pdb
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar-Final.csprojAssemblyReference.cache
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar_Final.LoginForm.resources
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar_Final.Properties.Resources.resources
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar-Final.csproj.GenerateResource.cache
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar-Final.csproj.CoreCompileInputs.cache
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar-Final.exe
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar-Final.pdb
+c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar_Final.MainProgram.resources
+C:\Users\SANSA\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar_Final.SearchForm.resources
