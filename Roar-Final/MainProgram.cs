@@ -431,17 +431,50 @@ namespace Roar_Final
                 sqlDa.Fill(dtbl);
                 dataGridView3.DataSource = dtbl;
             }
+            /*try
+            {
+                using (SqlConnection sqlcon = new SqlConnection(connectionString))
+                {
+                    /*string query = "SELECT SUM (Price) FROM Bill";
+                    using (SqlConnection sqlcon = new SqlConnection(connectionString))
+                    {
+                        object result = sqlcon.ExecuteScalar();
+                        label14.Text = Convert.ToString(result);
+                    }
+
+                    
+                    sqlcon.Open();
+                    SqlCommand cmd = new SqlCommand
+                        (
+                    "Select SUM(Payment_Amount) FROM Payable.Account", sqlcon);
+                    
+                    
+                    Int32 count = (Int32)cmd.ExecuteScalar();
+                    label14.Text = ();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }*/
             /*using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter
+                //SqlCommand com;
+                string q = "Select SUM Payment_Amount From Payable_Account";
+                /*SqlDataAdapter sqlDa = new SqlDataAdapter
                     (
-                        "Select SUM(Payable_Account.Payment_Amount) " +
-                        "From Payable_Account", sqlcon);
-                
-                label15.Text = sqlDa.ToString();
-            }
-            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+                        "Select SUM (Payable_Account.Payment_Amount) " +
+                        "From Payable_Account", sqlcon);*/
+            //com = new SqlCommand(q, con);
+            //reader.Read();
+            //labelname15.Text = reader["Name"].ToString();
+            //lCommand query = new SqlCommand(q, sqlcon);
+            //lDataReader dr = query.ExecuteReader();
+            //label15.Text = sqlDa.ToString();
+            //xtBox6.Text = dr["Total"].ToString();
+            //
+            /*using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter
@@ -479,6 +512,140 @@ namespace Roar_Final
         {
             SearchForm sf = new SearchForm();
             sf.ShowDialog();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Addform af = new Addform();
+            af.ShowDialog();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Addform af = new Addform();
+            af.ShowDialog();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter
+                    (
+                        "Select Account_Number," +
+                                "Account_Name," +
+                                "Organization," +
+                                "Contact_No," +
+                                "Address," +
+                                "EMail AS Email FROM Account_Details", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dataGridView4.DataSource = dtbl;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Enter a Name to Search");
+            }
+            else
+            {
+                using (SqlConnection sqlcon = new SqlConnection(connectionString))
+                {
+
+                    sqlcon.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter
+                        (
+                            "SELECT * FROM Account_Details WHERE Account_Name LIKE '" + textBox2.Text + "'", sqlcon);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+                    dataGridView4.DataSource = dtbl;
+                }
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = excel.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+
+            try
+            {
+
+                worksheet = workbook.ActiveSheet;
+
+                worksheet.Name = "ExportedFromDatGrid";
+
+                int cellRowIndex = 1;
+                int cellColumnIndex = 1;
+
+                //Loop through each row and read value from each column. 
+                for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < dataGridView3.Columns.Count; j++)
+                    {
+                        // Excel index starts from 1,1. As first Row would have the Column headers, adding a condition check. 
+                        if (cellRowIndex == 1)
+                        {
+                            worksheet.Cells[cellRowIndex, cellColumnIndex] = dataGridView3.Columns[j].HeaderText;
+                        }
+                        else
+                        {
+                            worksheet.Cells[cellRowIndex, cellColumnIndex] = dataGridView3.Rows[i].Cells[j].Value.ToString();
+                        }
+                        cellColumnIndex++;
+                    }
+                    cellColumnIndex = 1;
+                    cellRowIndex++;
+                }
+
+                //Getting the location and file name of the excel to save from user. 
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                saveDialog.FilterIndex = 2;
+
+                if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    workbook.SaveAs(saveDialog.FileName);
+                    MessageBox.Show("Export Successful","Sucess",MessageBoxButtons.OK);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                excel.Quit();
+                workbook = null;
+                excel = null;
+            }
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            //dataGridView3.Rows.Clear();
+            //dataGridView3.Refresh();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            //dataGridView2.DataSource = null;
+            //dataGridView2.Refresh();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            
+            /*string query = "SELECT SUM (Price) FROM Bill";
+            OleDbDataAdapter dAdapter = new OleDbDataAdapter(query, DBconn);
+            DataTable source = new DataTable();
+            dAdapter.Fill(source);
+            TotalValueLabel.Text = source.ToString();*/
         }
     }
 }

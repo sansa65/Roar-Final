@@ -10,3 +10,5 @@ c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar-Final.exe
 c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar-Final.pdb
 c:\users\sansa\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar_Final.MainProgram.resources
 C:\Users\SANSA\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar_Final.SearchForm.resources
+C:\Users\SANSA\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar_Final.Addform.resources
+C:\Users\SANSA\source\repos\Roar-Final\Roar-Final\obj\Debug\Roar-Final.csproj.ResolveComReference.cache

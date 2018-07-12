@@ -45,6 +45,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.button17 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +54,16 @@
             this.AddReinTra = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -95,10 +105,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -107,6 +113,8 @@
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -290,7 +298,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(156, 48);
+            this.tabControl1.Location = new System.Drawing.Point(153, 73);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(680, 460);
@@ -300,12 +308,8 @@
             // 
             this.tabPage1.AllowDrop = true;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.panel8);
-            this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.dataGridView3);
-            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -316,6 +320,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel8.Controls.Add(this.button17);
             this.panel8.Controls.Add(this.button7);
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.label1);
@@ -328,13 +333,27 @@
             this.panel8.Size = new System.Drawing.Size(666, 93);
             this.panel8.TabIndex = 5;
             // 
+            // button17
+            // 
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button17.Location = new System.Drawing.Point(579, 60);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(80, 30);
+            this.button17.TabIndex = 11;
+            this.button17.Text = "Save";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
             // button7
             // 
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(387, 24);
+            this.button7.Location = new System.Drawing.Point(386, 6);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(135, 47);
             this.button7.TabIndex = 10;
@@ -385,7 +404,7 @@
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button18.Location = new System.Drawing.Point(528, 24);
+            this.button18.Location = new System.Drawing.Point(527, 6);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(132, 47);
             this.button18.TabIndex = 4;
@@ -411,30 +430,146 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 99);
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 102);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(666, 297);
+            this.dataGridView3.Size = new System.Drawing.Size(666, 329);
             this.dataGridView3.TabIndex = 1;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button10);
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.tabPage3.Controls.Add(this.panel9);
+            this.tabPage3.Controls.Add(this.dataGridView4);
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(672, 434);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Accounts";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel9.Controls.Add(this.button10);
+            this.panel9.Controls.Add(this.textBox2);
+            this.panel9.Controls.Add(this.label20);
+            this.panel9.Controls.Add(this.label18);
+            this.panel9.Controls.Add(this.label19);
+            this.panel9.Controls.Add(this.button20);
+            this.panel9.Controls.Add(this.button21);
+            this.panel9.Controls.Add(this.button22);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(666, 91);
+            this.panel9.TabIndex = 14;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(510, 43);
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button10.Location = new System.Drawing.Point(455, 36);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Size = new System.Drawing.Size(30, 30);
+            this.button10.TabIndex = 13;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(315, 43);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(131, 20);
+            this.textBox2.TabIndex = 9;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.Location = new System.Drawing.Point(315, 19);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(105, 17);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "Search By Name";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(68, 49);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(121, 17);
+            this.label18.TabIndex = 7;
+            this.label18.Text = "Manage Account";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label19.Location = new System.Drawing.Point(68, 15);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(94, 17);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Add Account";
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button20.Location = new System.Drawing.Point(37, 11);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(25, 25);
+            this.button20.TabIndex = 2;
+            this.toolTip2.SetToolTip(this.button20, "Add a Receivable Transaction");
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button21
+            // 
+            this.button21.FlatAppearance.BorderSize = 0;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button21.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button21.Location = new System.Drawing.Point(526, 25);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(132, 47);
+            this.button21.TabIndex = 4;
+            this.button21.Text = "View All Accounts";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button22.BackgroundImage")));
+            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button22.FlatAppearance.BorderSize = 0;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button22.Location = new System.Drawing.Point(37, 45);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(25, 25);
+            this.button22.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.button22, "Add a Payable Transaction");
+            this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView4.Location = new System.Drawing.Point(3, 100);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(666, 331);
+            this.dataGridView4.TabIndex = 11;
             // 
             // tabPage4
             // 
@@ -917,50 +1052,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(58, 405);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(149, 17);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "Total Payable Payment :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(238, 405);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 17);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "label15";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(360, 405);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(170, 17);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Total Receivable Payment :";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(530, 405);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 17);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "label14";
-            // 
             // MainProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -983,11 +1074,13 @@
             this.panel3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -1019,7 +1112,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Panel scrollingpanel;
@@ -1070,9 +1162,16 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button17;
     }
 }

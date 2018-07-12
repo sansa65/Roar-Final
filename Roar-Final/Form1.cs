@@ -33,7 +33,7 @@ namespace Roar_Final
             }
             else
             {
-                MessageBox.Show("Wrong Username and Password", "alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Wrong Username and Password", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
