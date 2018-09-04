@@ -34,11 +34,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Time = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.Label();
@@ -106,7 +103,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -134,7 +130,7 @@
             this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(0, 433);
+            this.button5.Location = new System.Drawing.Point(0, 360);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 104);
             this.button5.TabIndex = 1;
@@ -153,7 +149,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(0, 331);
+            this.button4.Location = new System.Drawing.Point(0, 258);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 102);
             this.button4.TabIndex = 1;
@@ -172,7 +168,7 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(0, 245);
+            this.button3.Location = new System.Drawing.Point(0, 172);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 86);
             this.button3.TabIndex = 1;
@@ -191,7 +187,7 @@
             this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 163);
+            this.button2.Location = new System.Drawing.Point(0, 90);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 82);
             this.button2.TabIndex = 1;
@@ -200,25 +196,6 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 72);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Dashboard";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -237,26 +214,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(95, 88);
             this.panel4.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button9);
-            this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(672, 434);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Dashboard";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(68, 115);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(194, 109);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -284,7 +241,7 @@
             this.Date.AutoSize = true;
             this.Date.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Date.Location = new System.Drawing.Point(487, 3);
+            this.Date.Location = new System.Drawing.Point(399, 3);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(31, 14);
             this.Date.TabIndex = 0;
@@ -293,15 +250,14 @@
             // tabControl1
             // 
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(153, 73);
+            this.tabControl1.Location = new System.Drawing.Point(151, 31);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(680, 460);
+            this.tabControl1.Size = new System.Drawing.Size(680, 528);
             this.tabControl1.TabIndex = 10;
             // 
             // tabPage1
@@ -313,7 +269,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(672, 434);
+            this.tabPage1.Size = new System.Drawing.Size(672, 502);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Transactions";
             // 
@@ -343,7 +299,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(80, 30);
             this.button17.TabIndex = 11;
-            this.button17.Text = "Save";
+            this.button17.Text = "Save As..";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
@@ -433,7 +389,7 @@
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView3.Location = new System.Drawing.Point(3, 102);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(666, 329);
+            this.dataGridView3.Size = new System.Drawing.Size(666, 397);
             this.dataGridView3.TabIndex = 1;
             // 
             // tabPage3
@@ -444,7 +400,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(672, 434);
+            this.tabPage3.Size = new System.Drawing.Size(672, 502);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Accounts";
             // 
@@ -568,7 +524,7 @@
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView4.Location = new System.Drawing.Point(3, 100);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(666, 331);
+            this.dataGridView4.Size = new System.Drawing.Size(666, 399);
             this.dataGridView4.TabIndex = 11;
             // 
             // tabPage4
@@ -579,7 +535,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(672, 434);
+            this.tabPage4.Size = new System.Drawing.Size(672, 502);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Payable";
             // 
@@ -767,7 +723,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(666, 311);
+            this.dataGridView1.Size = new System.Drawing.Size(666, 379);
             this.dataGridView1.TabIndex = 17;
             // 
             // tabPage5
@@ -778,7 +734,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(672, 434);
+            this.tabPage5.Size = new System.Drawing.Size(672, 502);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Receivable";
             // 
@@ -965,12 +921,13 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(666, 312);
+            this.dataGridView2.Size = new System.Drawing.Size(666, 380);
             this.dataGridView2.TabIndex = 43;
             // 
             // scrollingpanel
             // 
             this.scrollingpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(84)))), ((int)(((byte)(255)))));
+            this.scrollingpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.scrollingpanel.Location = new System.Drawing.Point(146, 91);
             this.scrollingpanel.Name = "scrollingpanel";
             this.scrollingpanel.Size = new System.Drawing.Size(7, 72);
@@ -1039,7 +996,6 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -1069,7 +1025,6 @@
             this.Text = "MainProgram";
             this.Load += new System.EventHandler(this.MainProgram_Load);
             this.panel2.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -1102,10 +1057,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Label Date;

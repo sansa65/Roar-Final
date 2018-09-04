@@ -15,10 +15,11 @@ namespace Roar_Final
     public partial class MainProgram : Form
     {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SANSA\source\repos\Roar-Final\roardb.mdf;Integrated Security=True;Connect Timeout=30";
-        
+        //connecting the database(had to make sure the database is connected cuz there were some errors)
         int ToggleMove;
         int MValueX;
         int MValueY;
+        //declaring int variables to adjust the move of the app
 
         public MainProgram()
         {
@@ -28,6 +29,7 @@ namespace Roar_Final
         private void button8_Click(object sender, EventArgs e)
         {
             this.Close();
+            //closes the whole program
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -35,9 +37,10 @@ namespace Roar_Final
             foreach (Form form in Application.OpenForms)
             {
                 form.WindowState = FormWindowState.Minimized;
+                //minimizing the app
             }
         }
-
+        //adjusting the movements of the app when dragged from the top panel according to desktop mouse pointer values
         private void panel5_MouseDown(object sender, MouseEventArgs e)
         {
             ToggleMove = 1;
@@ -57,10 +60,11 @@ namespace Roar_Final
         {
             ToggleMove = 0;
         }
-
+        
         private void MainProgram_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            //starting to show the system time in app
             Date.Text = DateTime.Now.ToLongDateString();
             Time.Text = DateTime.Now.ToLongTimeString();
         }
@@ -71,13 +75,16 @@ namespace Roar_Final
             timer1.Start();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
         {
             scrollingpanel.Height = button1.Height;
             scrollingpanel.Top = button1.Top;
             tabControl1.SelectTab(tabPage2);
-        }
-
+        }*/
+        
+        /*As of each button is clicked the scrolling panel moves with the 
+        height and top fixed with button height and top values of the each button
+        and the tabs changes accordingly*/
         private void button2_Click(object sender, EventArgs e)
         {
             scrollingpanel.Height = button2.Height;
@@ -106,16 +113,7 @@ namespace Roar_Final
             tabControl1.SelectTab(tabPage5);
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //adjusting the movements of the app when dragged from the top middle label according to desktop mouse pointer values
         private void label12_MouseDown(object sender, MouseEventArgs e)
         {
             ToggleMove = 1;
@@ -135,46 +133,16 @@ namespace Roar_Final
         {
             ToggleMove = 0;
         }
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
+        
+        //(3)..edit button on receivable tab
 
         private void button15_Click(object sender, EventArgs e)
         {
+            //checking all the boxes are filled
             if (textBox10.Text == "" || textBox9.Text == "" || textBox8.Text == "" || textBox7.Text == "")
             {
                 MessageBox.Show("Enter Data to Edit");
+                //if not filled a message box will be shown
             }
             else
             {
@@ -183,6 +151,7 @@ namespace Roar_Final
                 bool validateaccountnum = int.TryParse(textBox8.Text, out myint2);
                 bool validatereceiamount = int.TryParse(textBox7.Text, out myint2);
 
+                //cheking the values entered in respective text boxes are integer values if not error messages are shown to each
                 if (validateInvno == true)
                 {
                     if (validateaccountnum == true)
@@ -192,8 +161,10 @@ namespace Roar_Final
                             try
                             {
                                 SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\SANSA\source\repos\Roar - Final\roardb.mdf; Integrated Security = True; Connect Timeout = 30");
+                                //connecting to DB
                                 //MessageBox.Show("Successfully connected");
                                 String query = "UPDATE Receivable_Account SET Invoice_Date='" + dateTimePicker2.Text + "',Account_Holder='" + textBox9.Text + "',Account_Number='" + textBox8.Text + "',Receivable_Amount='" + textBox7.Text + "' WHERE Invoice_Number='" + textBox10.Text + "' ";
+                                //Have to insert correct invoice number then the data to be edited in each textbox filled
                                 con.Open();
                                 SqlCommand cmd = new SqlCommand(query, con);
                                 cmd.ExecuteNonQuery();
@@ -222,11 +193,15 @@ namespace Roar_Final
             }
         }
 
+        //(3)..save button on receivable tab
+
         private void button16_Click(object sender, EventArgs e)
         {
+            //checking all the boxes are filled
             if (textBox10.Text == "" || textBox9.Text == "" || textBox8.Text == "" || textBox7.Text == "")
             {
                 MessageBox.Show("Enter Data to Save");
+                //if not filled a message box will be shown
             }
             else
             {
@@ -235,6 +210,7 @@ namespace Roar_Final
                 bool validateaccountnum = int.TryParse(textBox8.Text, out myint3);
                 bool validatereceiamount = int.TryParse(textBox7.Text, out myint3);
 
+                //cheking the values entered in respective text boxes are integer values if not error messages are shown to each
                 if (validateInvno == true)
                 {
                     if (validateaccountnum == true)
@@ -244,10 +220,11 @@ namespace Roar_Final
                             try
                             {
                                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SANSA\source\repos\Roar-Final\roardb.mdf;Integrated Security=True;Connect Timeout=30");
+                                //connecting to DB
                                 //MessageBox.Show("Successfully connected");
                                 String query = "INSERT INTO Receivable_Account(Invoice_Number,Invoice_Date,Account_Holder,Account_Number,Receivable_Amount) Values ('" + textBox10.Text + "','" + dateTimePicker2.Text + "','" + textBox9.Text + "','" + textBox8.Text + "','" + textBox7.Text + "')";
+                                //Inserting data into the DB
                                 con.Open();
-
                                 SqlCommand cmd = new SqlCommand(query, con);
                                 cmd.ExecuteNonQuery();
                                 MessageBox.Show("Successfully Saved");
@@ -275,12 +252,15 @@ namespace Roar_Final
             }
         }
 
+        //(3)..view button on receivable tab
+
         private void button14_Click(object sender, EventArgs e)
         {
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("Select Invoice_Number,Invoice_Date,Account_Holder,Account_Number,Receivable_Amount From Receivable_Account", sqlcon);
+                //Showing the data on the datagrid view by selecting the only columns that we want to show
                 DataTable dtbl1 = new DataTable();
                 sqlDa.Fill(dtbl1);
                 dataGridView2.DataSource = dtbl1;
@@ -288,11 +268,15 @@ namespace Roar_Final
             }
         }
 
+        //(3)..edit button on payable tab
+
         private void button11_Click(object sender, EventArgs e)
         {
+            //checking all the boxes are filled
             if (textBox1.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
             {
                 MessageBox.Show("Enter Data to Edit");
+                //if not filled a message box will be shown
             }
             else
             {
@@ -301,6 +285,7 @@ namespace Roar_Final
                 bool validateaccno = int.TryParse(textBox4.Text, out myint1);
                 bool validatepaymamount = int.TryParse(textBox5.Text, out myint1);
 
+                //cheking the values entered in respective text boxes are integer values if not error messages are shown to each
                 if (validateInvNo == true)
                 {
                     if (validateaccno == true)
@@ -312,6 +297,8 @@ namespace Roar_Final
                                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SANSA\source\repos\Roar-Final\roardb.mdf;Integrated Security=True;Connect Timeout=30");
                                 //MessageBox.Show("Successfully connected");
                                 String query = "UPDATE Payable_Account SET Invoice_Date='" + dateTimePicker1.Text + "',Account_Holder='" + textBox3.Text + "',Account_Number='" + textBox4.Text + "',Payment_Amount='" + textBox5.Text + "' where Invoice_Number='" + textBox1.Text + "'";
+                                ////Have to insert correct invoice number then the data to be edited in each textbox filled
+
                                 //"UPDATE Receivable_Accounts SET Invoice#='"+textBox10.Text+"',Invoice_Date='"+textBox6.Text+"',Account_Holder='"+textBox9.Text+"',Account_Number='"+textBox8.Text+"',Payment_Amount='"+textBox7.Text+"') WHERE Invoice#='"+textBox10.Text+"' ";
                                 con.Open();
                                 SqlCommand cmd = new SqlCommand(query, con);
@@ -341,11 +328,15 @@ namespace Roar_Final
             }
         }
 
+        //(3)..save button on payable tab
+
         private void button12_Click(object sender, EventArgs e)
         {
+            //checking all the boxes are filled
             if (textBox1.Text =="" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
             {
                 MessageBox.Show("Enter Data to Save");
+                //if not filled a message box will be shown
             }
             else
             {
@@ -354,6 +345,7 @@ namespace Roar_Final
                 bool validateAccNo= int.TryParse(textBox4.Text, out myInt);
                 bool validatepayamount= int.TryParse(textBox5.Text, out myInt);
 
+                //cheking the values entered in respective text boxes are integer values if not error messages are shown to each
                 if (validateInvoiceNo == true)
                 {
                     if (validateAccNo == true)
@@ -367,6 +359,8 @@ namespace Roar_Final
                                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SANSA\source\repos\Roar-Final\roardb.mdf;Integrated Security=True;Connect Timeout=30");
                                 //MessageBox.Show("Successfully connected");
                                 String query = "INSERT INTO Payable_Account(Invoice_Number,Invoice_Date,Account_Holder,Account_Number,Payment_Amount) Values ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
+                                //Inserting data into DB
+
                                 con.Open();
                                 SqlCommand cmd = new SqlCommand(query, con);
                                 cmd.ExecuteNonQuery();
@@ -395,17 +389,22 @@ namespace Roar_Final
             }
         }
 
+        //(3)..view button on payable tab
+
         private void button13_Click(object sender, EventArgs e)
         {
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 sqlcon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("Select Invoice_Number,Invoice_Date,Account_Holder,Account_Number,Payment_Amount From Payable_Account", sqlcon);
+                //Showing the data on the datagrid view by selecting the only columns that we want to show
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
             }
         }
+
+        //(2)..view all button in transactions tab
 
         private void button18_Click(object sender, EventArgs e)
         {
@@ -427,10 +426,15 @@ namespace Roar_Final
                           "From Payable_Account " +
                           "FULL OUTER JOIN Receivable_Account " +
                           "ON Payable_Account.Invoice_Number=Receivable_Account.Invoice_Number", sqlcon);
+                /*Merged the 2 tables by full outer join so all coloumns will be shown 
+                and selected the columns that are needed to be shown(changed the column names as we needed)*/
+
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 dataGridView3.DataSource = dtbl;
             }
+
+            //tried to get the sum..didn't worked out
             /*try
             {
                 using (SqlConnection sqlcon = new SqlConnection(connectionString))
@@ -498,33 +502,43 @@ namespace Roar_Final
             }*/
         }
 
+        //(2)..add buttons on transactions tab
         private void AddReinTra_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(tabPage4);
+            //switching to the selected tab
+
         }
 
+        //(2)..add buttons on transactions tab
         private void AddPayinTran_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(tabPage5);
+            //switching to the selected tab
         }
 
+        //(2)..A new form opens to search by name 
         private void button7_Click(object sender, EventArgs e)
         {
             SearchForm sf = new SearchForm();
             sf.ShowDialog();
         }
 
+        //(1)..A new form opens to Add Account
         private void button20_Click(object sender, EventArgs e)
         {
             Addform af = new Addform();
             af.ShowDialog();
         }
 
+        //(1)..A new form opens to Manage Account
         private void button22_Click(object sender, EventArgs e)
         {
             Addform af = new Addform();
             af.ShowDialog();
         }
+
+        //(1)..View all in Accounts tab
 
         private void button21_Click(object sender, EventArgs e)
         {
@@ -539,15 +553,19 @@ namespace Roar_Final
                                 "Contact_No," +
                                 "Address," +
                                 "EMail AS Email FROM Account_Details", sqlcon);
+                ///Showing the data on the datagrid view by selecting the only columns that we want to show
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 dataGridView4.DataSource = dtbl;
             }
         }
 
+        //(1)..Search button on Accounts tab
+
         private void button10_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == "")
+            //if the search box is empty a message is shown
             {
                 MessageBox.Show("Enter a Name to Search");
             }
@@ -560,12 +578,15 @@ namespace Roar_Final
                     SqlDataAdapter sqlDa = new SqlDataAdapter
                         (
                             "SELECT * FROM Account_Details WHERE Account_Name LIKE '" + textBox2.Text + "'", sqlcon);
+                    //Showing the details of the account by the name that we searches
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dataGridView4.DataSource = dtbl;
                 }
             }
         }
+
+        //(2).. save as button on transactions tab
 
         private void button17_Click(object sender, EventArgs e)
         {
@@ -606,6 +627,7 @@ namespace Roar_Final
                 //Getting the location and file name of the excel to save from user. 
                 SaveFileDialog saveDialog = new SaveFileDialog();
                 saveDialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                //User is able to select the type that the document needs to be saved
                 saveDialog.FilterIndex = 2;
 
                 if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
