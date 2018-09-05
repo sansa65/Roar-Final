@@ -102,6 +102,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -542,6 +544,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.dateTimePicker1);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.button11);
@@ -741,6 +744,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel7.Controls.Add(this.button9);
             this.panel7.Controls.Add(this.dateTimePicker2);
             this.panel7.Controls.Add(this.textBox7);
             this.panel7.Controls.Add(this.label8);
@@ -1008,6 +1012,32 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(415, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 21);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Clean";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button9
+            // 
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button9.Location = new System.Drawing.Point(414, 69);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(48, 21);
+            this.button9.TabIndex = 66;
+            this.button9.Text = "Clean";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // MainProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1125,5 +1155,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button9;
     }
 }

@@ -160,7 +160,7 @@ namespace Roar_Final
                         {
                             try
                             {
-                                SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\SANSA\source\repos\Roar - Final\roardb.mdf; Integrated Security = True; Connect Timeout = 30");
+                                SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\SANSA\source\repos\Roar-Final\roardb.mdf; Integrated Security = True; Connect Timeout = 30");
                                 //connecting to DB
                                 //MessageBox.Show("Successfully connected");
                                 String query = "UPDATE Receivable_Account SET Invoice_Date='" + dateTimePicker2.Text + "',Account_Holder='" + textBox9.Text + "',Account_Number='" + textBox8.Text + "',Receivable_Amount='" + textBox7.Text + "' WHERE Invoice_Number='" + textBox10.Text + "' ";
@@ -296,7 +296,7 @@ namespace Roar_Final
                             {
                                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SANSA\source\repos\Roar-Final\roardb.mdf;Integrated Security=True;Connect Timeout=30");
                                 //MessageBox.Show("Successfully connected");
-                                String query = "UPDATE Payable_Account SET Invoice_Date='" + dateTimePicker1.Text + "',Account_Holder='" + textBox3.Text + "',Account_Number='" + textBox4.Text + "',Payment_Amount='" + textBox5.Text + "' where Invoice_Number='" + textBox1.Text + "'";
+                                String query = "UPDATE Payable_Account SET Invoice_Date='" + dateTimePicker1.Text + "',Account_Holder='" + textBox3.Text + "',Account_Number='" + textBox4.Text + "',Receivable_Amount='" + textBox5.Text + "' WHERE Invoice_Number='" + textBox1.Text + "'";
                                 ////Have to insert correct invoice number then the data to be edited in each textbox filled
 
                                 //"UPDATE Receivable_Accounts SET Invoice#='"+textBox10.Text+"',Invoice_Date='"+textBox6.Text+"',Account_Holder='"+textBox9.Text+"',Account_Number='"+textBox8.Text+"',Payment_Amount='"+textBox7.Text+"') WHERE Invoice#='"+textBox10.Text+"' ";
@@ -668,6 +668,25 @@ namespace Roar_Final
             DataTable source = new DataTable();
             dAdapter.Fill(source);
             TotalValueLabel.Text = source.ToString();*/
+        }
+
+        //(3).. cleaning the textboxes in payable tab if they are filled
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = null;
+            textBox3.Text = null;
+            textBox4.Text = null;
+            textBox5.Text = null;
+            //textBox1.Text = null;
+        }
+
+        //(3).. cleaning the textboxes in receivable tab if they are filled
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox10.Text = null;
+            textBox9.Text = null;
+            textBox8.Text = null;
+            textBox7.Text = null;
         }
     }
 }
